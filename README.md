@@ -5,7 +5,7 @@ KJPS 2016 nomtenē tēma būs tīmekļa spēļu izstrāde. Mērķis būs sadalī
 ## Izmantotās tehnoloģijas
 
 * **JavaScript** - valoda, kuru izmanto, lai programmētu dažādas darbības un loģiku, ieskaitot zīmēšanu. Vairāk lasīt par JavaScript [šeit](http://www.w3schools.com/js/default.asp).
-* **Phaser** - JavaScript bibliotēka, kuru izmanto, lai vienkāršāk zīmētu vai taisītu spēles. Vairāk lasīt par Phaser [šeit](http://phaser.io/).
+* **Pixi.JS** - JavaScript bibliotēka, kuru izmanto, lai vienkāršāk zīmētu vai taisītu spēles. Vairāk lasīt par Pixi.JS [šeit](http://www.pixijs.com/).
 
 ## Projekta izstrādes veidi
 
