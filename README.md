@@ -11,6 +11,6 @@ KJPS 2016 nomtenē tēma būs tīmekļa spēļu izstrāde. Mērķis būs sadalī
 
 Katrai komandai (vai personai) ir iespēja izstrādāt tīmekļa spēli vienā no sekojošiem veidiem.
 
-1. **Phaser bibliotēka** - mēs palīdzēsim jums strādāt ar šo bibliotēku un atrisināsim problēmas. Ja zināšanas ir minimālas vai trūkst pārliecība par spējām, šis ir labākais variants.
+1. **Pixi.JS bibliotēka** - mēs palīdzēsim jums strādāt ar šo bibliotēku un atrisināsim problēmas. Ja zināšanas ir minimālas vai trūkst pārliecība par spējām, šis ir labākais variants.
 1. **Cita JavaScript bibliotēka** - tiem, kam ir pārliecība par savām spējām un zināšanas par citām tehnoloģijām, lai izveidotu tīmekļa spēli, var izmantot tās.
 1. **HTML** - ja ļooooti gribās veidot spēli HTML, tad tas ir pieļaujams. Bet ieteicams pieturēties pie JavaScripta un WebGL/Canvas tehnoloģijām.
