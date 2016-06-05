@@ -2,6 +2,12 @@
 
 var renderer;
 var stage;
+var events = {};
+var KEY_DOWN = 83;
+var KEY_UP = 87;
+var KEY_RIGHT = 68;
+var KEY_LEFT = 65;
+var KEY_SPACEBAR = 32
 
 /**
  * Sākt spēli.
@@ -283,12 +289,10 @@ function draggable(g) {
     var dragData = null;
 
     function onDragStart(e) {
-        console.log('Drag start');
         dragData = e.data;
     }
 
     function onDragMove() {
-        console.log('Drag move');
         if (dragData) {
             var newPosition = dragData.getLocalPosition(stage);
             g.position.set(newPosition.x, newPosition.y);
@@ -296,7 +300,6 @@ function draggable(g) {
     }
 
     function onDragEnd() {
-        console.log('Drag end');
         dragData = null;
     }
 
@@ -316,3 +319,57 @@ function draggable(g) {
 
     return g;
 }
+
+/**
+ * Pogas nospiešana uz leju.
+ *
+ * @param {Numeric} key
+ * @param {Function} fn
+ */
+function onKeyDown(key, fn)
+{
+    if (!events['onkeydown']) {
+        events['onkeydown'] = [];
+    }
+
+    events['onkeydown'].push(function(e){
+        e.which == key && fn();
+    });
+}
+
+/**
+ * Pogas atlaišana.
+ *
+ * @param {Numeric} key
+ * @param {Function} fn
+ */
+function onKeyUp(key, fn)
+{
+    if (!events['onkeyup']) {
+        events['onkeyup'] = [];
+    }
+
+    events['onkeyup'].push(function(e){
+        e.which == key && fn();
+    });
+}
+
+document.onkeydown = function(e){
+    if (events['onkeydown'] === undefined) {
+        return;
+    }
+
+    for (var i in events['onkeydown']) {
+        events['onkeydown'][i](e);
+    }
+};
+
+document.onkeyup = function(e){
+    if (events['onkeyup'] === undefined) {
+        return;
+    }
+
+    for (var i in events['onkeyup']) {
+        events['onkeyup'][i](e);
+    }
+};
