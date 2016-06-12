@@ -1,5 +1,6 @@
 "use strict";
 
+var gameState = true;
 var renderer;
 var stage;
 var events = {};
@@ -33,7 +34,7 @@ function init(width, height, options) {
 function animate(tick) {
     var fn = function(){
         requestAnimationFrame(fn);
-        tick();
+        gameState && tick();
         renderer.render(stage);
     };
 
@@ -187,6 +188,8 @@ function elipse(x, y, width, height, color) {
     return g;
 }
 
+var textureCache = {};
+
 /**
  * Zīmēt attēlu.
  *
@@ -197,7 +200,8 @@ function elipse(x, y, width, height, color) {
  * @return PIXI.Sprite
  */
 function image(x, y, url) {
-    var texture = PIXI.Texture.fromImage(url);
+    var texture = textureCache[url] ? textureCache[url] : PIXI.Texture.fromImage(url);
+    textureCache[url] = texture;
     var sprite = new PIXI.Sprite(texture);
     sprite.position.set(x, y);
     stage.addChild(sprite);
@@ -252,13 +256,10 @@ function moveBy(g, x, y) {
  * Izdzēst elementu.
  *
  * @param {PIXI.Graphics} g
- *
- * @return {PIXI.Graphics}
  */
 function remove(g) {
     stage.removeChild(g);
-
-    return g;
+    g.destroy();
 }
 
 /**
@@ -266,15 +267,19 @@ function remove(g) {
  *
  * @param {PIXI.Graphics} g1
  * @param {PIXI.Graphics} g2
+ * @param {Number} offset
  *
  * @return {Boolean}
  */
-function isCollision(g1, g2) {
-    var r1 = g1.getBounds();
-    var r2 = g2.getBounds();
+function isCollision(g1, g2, offset) {
+    var r1 = g1.getBounds(),
+        r2 = g2.getBounds(),
+        p1 = g1.position,
+        p2 = g2.position;
+    offset = offset || 0;
 
-    return r1.x <= r2.x + r2.width && r1.x + r1.width >= r2.x &&
-        r1.y <= r2.y + r2.height && r1.y + r1.height >= r2.y;
+    return p2.x + r2.width - p1.x - offset > 0 && p1.x + r1.width - p2.x - offset > 0 &&
+        p2.y + r2.height - p1.y - offset > 0 && p1.y + r1.height - p2.y - offset > 0;
 }
 
 /**
@@ -321,6 +326,22 @@ function draggable(g) {
 }
 
 /**
+ * Atsākt spēles darbību.
+ */
+function resume()
+{
+    gameState = true;
+}
+
+/**
+ * Apstādināt spēles darbību.
+ */
+function pause()
+{
+    gameState = false;
+}
+
+/**
  * Pogas nospiešana uz leju.
  *
  * @param {Numeric} key
@@ -355,7 +376,7 @@ function onKeyUp(key, fn)
 }
 
 document.onkeydown = function(e){
-    if (events['onkeydown'] === undefined) {
+    if (!gameState || events['onkeydown'] === undefined) {
         return;
     }
 
@@ -365,7 +386,7 @@ document.onkeydown = function(e){
 };
 
 document.onkeyup = function(e){
-    if (events['onkeyup'] === undefined) {
+    if (!gameState || events['onkeyup'] === undefined) {
         return;
     }
 
