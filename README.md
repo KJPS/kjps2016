@@ -12,7 +12,7 @@ KJPS 2016 nomtenē tēma būs tīmekļa spēļu izstrāde. Mērķis būs sadalī
 
 Katrai komandai (vai personai) ir iespēja izstrādāt tīmekļa spēli vienā no sekojošiem veidiem.
 
-1. **Simry.JS** - Bibliotēka iesācējiem.
+1. **Simry.JS** - Bibliotēka iesācējiem bāzēta uz Pixi.JS. Šo izmantojot var mierīgi izmantot arī Pixi.JS.
 1. **Pixi.JS** - Vienkārša JavaScript grafiskā bibliotēka.
 1. **Cita JavaScript bibliotēka** - tiem, kam ir pārliecība par savām spējām un zināšanas par citām tehnoloģijām, lai izveidotu tīmekļa spēli, var izmantot tās.
 1. **HTML** - ja ļooooti gribās veidot spēli HTML. Bet ieteicams pieturēties pie JavaScripta un WebGL/Canvas tehnoloģijām.
