@@ -4,7 +4,7 @@
   "description": "Pixi.JS simplified library for educational purposes.",
   "main": "simry.js",
   "scripts": {
-    "docs": "jsdoc2md simry.js > simry.md"
+    "docs": "./node_modules/.bin/jsdoc2md simry.js > simry.md"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "webgl",
     "canvas"
   ],
-  "devDependencies": {
+  "dependencies": {
       "jsdoc-to-markdown": "^1.3"
   },
   "author": "Jānis Gruzis <jgruzis@gmail.com>",
