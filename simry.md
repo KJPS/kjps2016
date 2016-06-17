@@ -1,56 +1,56 @@
 ## Members
 
 <dl>
-<dt><a href="#S">S</a> : <code>Number</code></dt>
-<dd><p>taustiņš</p>
+<dt><a href="#KEY_DOWN">KEY_DOWN</a> : <code>Number</code></dt>
+<dd><p>&quot;S&quot; taustiņš</p>
 </dd>
-<dt><a href="#W">W</a> : <code>Number</code></dt>
-<dd><p>taustiņš</p>
+<dt><a href="#KEY_UP">KEY_UP</a> : <code>Number</code></dt>
+<dd><p>&quot;W&quot; taustiņš</p>
 </dd>
-<dt><a href="#D">D</a> : <code>Number</code></dt>
-<dd><p>taustiņš</p>
+<dt><a href="#KEY_RIGHT">KEY_RIGHT</a> : <code>Number</code></dt>
+<dd><p>&quot;D&quot; taustiņš</p>
 </dd>
-<dt><a href="#A">A</a> : <code>Number</code></dt>
-<dd><p>taustiņš</p>
+<dt><a href="#KEY_LEFT">KEY_LEFT</a> : <code>Number</code></dt>
+<dd><p>&quot;A&quot; taustiņš</p>
 </dd>
-<dt><a href="#Spacebar">Spacebar</a> : <code>Number</code></dt>
-<dd><p>taustiņš</p>
+<dt><a href="#KEY_SPACEBAR">KEY_SPACEBAR</a> : <code>Number</code></dt>
+<dd><p>&quot;Spacebar&quot; taustiņš</p>
 </dd>
-<dt><a href="#Sarkana">Sarkana</a> : <code>Number</code></dt>
-<dd><p>krāsa</p>
+<dt><a href="#COLOR_RED">COLOR_RED</a> : <code>Number</code></dt>
+<dd><p>Sarkana krāsa</p>
 </dd>
-<dt><a href="#Zila">Zila</a> : <code>Number</code></dt>
-<dd><p>krāsa</p>
+<dt><a href="#COLOR_BLUE">COLOR_BLUE</a> : <code>Number</code></dt>
+<dd><p>Zila krāsa</p>
 </dd>
-<dt><a href="#Zaļa">Zaļa</a> : <code>Number</code></dt>
-<dd><p>krāsa</p>
+<dt><a href="#COLOR_GREEN">COLOR_GREEN</a> : <code>Number</code></dt>
+<dd><p>Zaļa krāsa</p>
 </dd>
-<dt><a href="#Rozā">Rozā</a> : <code>Number</code></dt>
-<dd><p>krāsa</p>
+<dt><a href="#COLOR_PINK">COLOR_PINK</a> : <code>Number</code></dt>
+<dd><p>Rozā krāsa</p>
 </dd>
-<dt><a href="#Dzeltena">Dzeltena</a> : <code>Number</code></dt>
-<dd><p>krāsa</p>
+<dt><a href="#COLOR_YELLOW">COLOR_YELLOW</a> : <code>Number</code></dt>
+<dd><p>Dzeltena krāsa</p>
 </dd>
-<dt><a href="#Balta">Balta</a> : <code>Number</code></dt>
-<dd><p>krāsa</p>
+<dt><a href="#COLOR_WHITE">COLOR_WHITE</a> : <code>Number</code></dt>
+<dd><p>Balta krāsa</p>
 </dd>
-<dt><a href="#Balta">Balta</a> : <code>Number</code></dt>
-<dd><p>krāsa</p>
+<dt><a href="#COLOR_BLACK">COLOR_BLACK</a> : <code>Number</code></dt>
+<dd><p>Balta krāsa</p>
 </dd>
-<dt><a href="#Pelēka">Pelēka</a> : <code>Number</code></dt>
-<dd><p>krāsa</p>
+<dt><a href="#COLOR_GRAY">COLOR_GRAY</a> : <code>Number</code></dt>
+<dd><p>Pelēka krāsa</p>
 </dd>
-<dt><a href="#Oranža">Oranža</a> : <code>Number</code></dt>
-<dd><p>krāsa</p>
+<dt><a href="#COLOR_ORANGE">COLOR_ORANGE</a> : <code>Number</code></dt>
+<dd><p>Oranža krāsa</p>
 </dd>
-<dt><a href="#Violeta">Violeta</a> : <code>Number</code></dt>
-<dd><p>krasa</p>
+<dt><a href="#COLOR_PURPLE">COLOR_PURPLE</a> : <code>Number</code></dt>
+<dd><p>Violeta krasa</p>
 </dd>
-<dt><a href="#Brūna">Brūna</a> : <code>Number</code></dt>
-<dd><p>krāsa</p>
+<dt><a href="#COLOR_BROWN">COLOR_BROWN</a> : <code>Number</code></dt>
+<dd><p>Brūna krāsa</p>
 </dd>
-<dt><a href="#Teal">Teal</a> : <code>Number</code></dt>
-<dd><p>krāsa</p>
+<dt><a href="#COLOR_TEAL">COLOR_TEAL</a> : <code>Number</code></dt>
+<dd><p>Teal krāsa</p>
 </dd>
 </dl>
 
@@ -116,106 +116,106 @@
 </dd>
 </dl>
 
-<a name="S"></a>
+<a name="KEY_DOWN"></a>
 
-## S : <code>Number</code>
-taustiņš
-
-**Kind**: global variable  
-<a name="W"></a>
-
-## W : <code>Number</code>
-taustiņš
+## KEY_DOWN : <code>Number</code>
+"S" taustiņš
 
 **Kind**: global variable  
-<a name="D"></a>
+<a name="KEY_UP"></a>
 
-## D : <code>Number</code>
-taustiņš
-
-**Kind**: global variable  
-<a name="A"></a>
-
-## A : <code>Number</code>
-taustiņš
+## KEY_UP : <code>Number</code>
+"W" taustiņš
 
 **Kind**: global variable  
-<a name="Spacebar"></a>
+<a name="KEY_RIGHT"></a>
 
-## Spacebar : <code>Number</code>
-taustiņš
-
-**Kind**: global variable  
-<a name="Sarkana"></a>
-
-## Sarkana : <code>Number</code>
-krāsa
+## KEY_RIGHT : <code>Number</code>
+"D" taustiņš
 
 **Kind**: global variable  
-<a name="Zila"></a>
+<a name="KEY_LEFT"></a>
 
-## Zila : <code>Number</code>
-krāsa
-
-**Kind**: global variable  
-<a name="Zaļa"></a>
-
-## Zaļa : <code>Number</code>
-krāsa
+## KEY_LEFT : <code>Number</code>
+"A" taustiņš
 
 **Kind**: global variable  
-<a name="Rozā"></a>
+<a name="KEY_SPACEBAR"></a>
 
-## Rozā : <code>Number</code>
-krāsa
-
-**Kind**: global variable  
-<a name="Dzeltena"></a>
-
-## Dzeltena : <code>Number</code>
-krāsa
+## KEY_SPACEBAR : <code>Number</code>
+"Spacebar" taustiņš
 
 **Kind**: global variable  
-<a name="Balta"></a>
+<a name="COLOR_RED"></a>
 
-## Balta : <code>Number</code>
-krāsa
-
-**Kind**: global variable  
-<a name="Balta"></a>
-
-## Balta : <code>Number</code>
-krāsa
+## COLOR_RED : <code>Number</code>
+Sarkana krāsa
 
 **Kind**: global variable  
-<a name="Pelēka"></a>
+<a name="COLOR_BLUE"></a>
 
-## Pelēka : <code>Number</code>
-krāsa
-
-**Kind**: global variable  
-<a name="Oranža"></a>
-
-## Oranža : <code>Number</code>
-krāsa
+## COLOR_BLUE : <code>Number</code>
+Zila krāsa
 
 **Kind**: global variable  
-<a name="Violeta"></a>
+<a name="COLOR_GREEN"></a>
 
-## Violeta : <code>Number</code>
-krasa
-
-**Kind**: global variable  
-<a name="Brūna"></a>
-
-## Brūna : <code>Number</code>
-krāsa
+## COLOR_GREEN : <code>Number</code>
+Zaļa krāsa
 
 **Kind**: global variable  
-<a name="Teal"></a>
+<a name="COLOR_PINK"></a>
 
-## Teal : <code>Number</code>
-krāsa
+## COLOR_PINK : <code>Number</code>
+Rozā krāsa
+
+**Kind**: global variable  
+<a name="COLOR_YELLOW"></a>
+
+## COLOR_YELLOW : <code>Number</code>
+Dzeltena krāsa
+
+**Kind**: global variable  
+<a name="COLOR_WHITE"></a>
+
+## COLOR_WHITE : <code>Number</code>
+Balta krāsa
+
+**Kind**: global variable  
+<a name="COLOR_BLACK"></a>
+
+## COLOR_BLACK : <code>Number</code>
+Balta krāsa
+
+**Kind**: global variable  
+<a name="COLOR_GRAY"></a>
+
+## COLOR_GRAY : <code>Number</code>
+Pelēka krāsa
+
+**Kind**: global variable  
+<a name="COLOR_ORANGE"></a>
+
+## COLOR_ORANGE : <code>Number</code>
+Oranža krāsa
+
+**Kind**: global variable  
+<a name="COLOR_PURPLE"></a>
+
+## COLOR_PURPLE : <code>Number</code>
+Violeta krasa
+
+**Kind**: global variable  
+<a name="COLOR_BROWN"></a>
+
+## COLOR_BROWN : <code>Number</code>
+Brūna krāsa
+
+**Kind**: global variable  
+<a name="COLOR_TEAL"></a>
+
+## COLOR_TEAL : <code>Number</code>
+Teal krāsa
 
 **Kind**: global variable  
 <a name="init"></a>
