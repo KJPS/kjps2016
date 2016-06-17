@@ -1,3 +1,59 @@
+## Members
+
+<dl>
+<dt><a href="#S">S</a> : <code>Number</code></dt>
+<dd><p>taustiņš</p>
+</dd>
+<dt><a href="#W">W</a> : <code>Number</code></dt>
+<dd><p>taustiņš</p>
+</dd>
+<dt><a href="#D">D</a> : <code>Number</code></dt>
+<dd><p>taustiņš</p>
+</dd>
+<dt><a href="#A">A</a> : <code>Number</code></dt>
+<dd><p>taustiņš</p>
+</dd>
+<dt><a href="#Spacebar">Spacebar</a> : <code>Number</code></dt>
+<dd><p>taustiņš</p>
+</dd>
+<dt><a href="#Sarkana">Sarkana</a> : <code>Number</code></dt>
+<dd><p>krāsa</p>
+</dd>
+<dt><a href="#Zila">Zila</a> : <code>Number</code></dt>
+<dd><p>krāsa</p>
+</dd>
+<dt><a href="#Zaļa">Zaļa</a> : <code>Number</code></dt>
+<dd><p>krāsa</p>
+</dd>
+<dt><a href="#Rozā">Rozā</a> : <code>Number</code></dt>
+<dd><p>krāsa</p>
+</dd>
+<dt><a href="#Dzeltena">Dzeltena</a> : <code>Number</code></dt>
+<dd><p>krāsa</p>
+</dd>
+<dt><a href="#Balta">Balta</a> : <code>Number</code></dt>
+<dd><p>krāsa</p>
+</dd>
+<dt><a href="#Balta">Balta</a> : <code>Number</code></dt>
+<dd><p>krāsa</p>
+</dd>
+<dt><a href="#Pelēka">Pelēka</a> : <code>Number</code></dt>
+<dd><p>krāsa</p>
+</dd>
+<dt><a href="#Oranža">Oranža</a> : <code>Number</code></dt>
+<dd><p>krāsa</p>
+</dd>
+<dt><a href="#Violeta">Violeta</a> : <code>Number</code></dt>
+<dd><p>krasa</p>
+</dd>
+<dt><a href="#Brūna">Brūna</a> : <code>Number</code></dt>
+<dd><p>krāsa</p>
+</dd>
+<dt><a href="#Teal">Teal</a> : <code>Number</code></dt>
+<dd><p>krāsa</p>
+</dd>
+</dl>
+
 ## Functions
 
 <dl>
@@ -60,6 +116,108 @@
 </dd>
 </dl>
 
+<a name="S"></a>
+
+## S : <code>Number</code>
+taustiņš
+
+**Kind**: global variable  
+<a name="W"></a>
+
+## W : <code>Number</code>
+taustiņš
+
+**Kind**: global variable  
+<a name="D"></a>
+
+## D : <code>Number</code>
+taustiņš
+
+**Kind**: global variable  
+<a name="A"></a>
+
+## A : <code>Number</code>
+taustiņš
+
+**Kind**: global variable  
+<a name="Spacebar"></a>
+
+## Spacebar : <code>Number</code>
+taustiņš
+
+**Kind**: global variable  
+<a name="Sarkana"></a>
+
+## Sarkana : <code>Number</code>
+krāsa
+
+**Kind**: global variable  
+<a name="Zila"></a>
+
+## Zila : <code>Number</code>
+krāsa
+
+**Kind**: global variable  
+<a name="Zaļa"></a>
+
+## Zaļa : <code>Number</code>
+krāsa
+
+**Kind**: global variable  
+<a name="Rozā"></a>
+
+## Rozā : <code>Number</code>
+krāsa
+
+**Kind**: global variable  
+<a name="Dzeltena"></a>
+
+## Dzeltena : <code>Number</code>
+krāsa
+
+**Kind**: global variable  
+<a name="Balta"></a>
+
+## Balta : <code>Number</code>
+krāsa
+
+**Kind**: global variable  
+<a name="Balta"></a>
+
+## Balta : <code>Number</code>
+krāsa
+
+**Kind**: global variable  
+<a name="Pelēka"></a>
+
+## Pelēka : <code>Number</code>
+krāsa
+
+**Kind**: global variable  
+<a name="Oranža"></a>
+
+## Oranža : <code>Number</code>
+krāsa
+
+**Kind**: global variable  
+<a name="Violeta"></a>
+
+## Violeta : <code>Number</code>
+krasa
+
+**Kind**: global variable  
+<a name="Brūna"></a>
+
+## Brūna : <code>Number</code>
+krāsa
+
+**Kind**: global variable  
+<a name="Teal"></a>
+
+## Teal : <code>Number</code>
+krāsa
+
+**Kind**: global variable  
 <a name="init"></a>
 
 ## init(width, height, options)
