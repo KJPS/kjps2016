@@ -16,19 +16,30 @@ var KEY_LEFT = 65;
 /** @var {Number} "Spacebar" taustiņš */
 var KEY_SPACEBAR = 32
 
+/** @var {Number} Sarkana krāsa */
 var COLOR_RED = 0xFF0000;
+/** @var {Number} Zila krāsa */
 var COLOR_BLUE = 0x4169E1;
+/** @var {Number} Zaļa krāsa */
 var COLOR_GREEN = 0x228B22;
+/** @var {Number} Rozā krāsa */
 var COLOR_PINK = 0xFF1493;
+/** @var {Number} Dzeltena krāsa */
 var COLOR_YELLOW = 0xFFD700;
+/** @var {Number} Balta krāsa */
 var COLOR_WHITE = 0xFFFFFF;
+/** @var {Number} Balta krāsa */
 var COLOR_BLACK = 0x000000;
+/** @var {Number} Pelēka krāsa */
 var COLOR_GREY = 0x778899;
+/** @var {Number} Oranža krāsa */
 var COLOR_ORANGE = 0xFF4500;
+/** @var {Number} Violeta krasa */
 var COLOR_PURPLE = 0x800080;
+/** @var {Number} Brūna krāsa */
 var COLOR_BROWN = 0x8B4513;
+/** @var {Number} Teal krāsa */
 var COLOR_TEAL = 0x008080;
-var COLOR_GRAY = 0x778899;
 
 /**
  * Sākt spēli.
