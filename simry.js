@@ -4,11 +4,31 @@ var gameState = true;
 var renderer;
 var stage;
 var events = {};
+
+/** @var {Number} "S" taustiņš */
 var KEY_DOWN = 83;
+/** @var {Number} "W" taustiņš */
 var KEY_UP = 87;
+/** @var {Number} "D" taustiņš */
 var KEY_RIGHT = 68;
+/** @var {Number} "A" taustiņš */
 var KEY_LEFT = 65;
+/** @var {Number} "Spacebar" taustiņš */
 var KEY_SPACEBAR = 32
+
+var COLOR_RED = 0xFF0000;
+var COLOR_BLUE = 0x4169E1;
+var COLOR_GREEN = 0x228B22;
+var COLOR_PINK = 0xFF1493;
+var COLOR_YELLOW = 0xFFD700;
+var COLOR_WHITE = 0xFFFFFF;
+var COLOR_BLACK = 0x000000;
+var COLOR_GREY = 0x778899;
+var COLOR_ORANGE = 0xFF4500;
+var COLOR_PURPLE = 0x800080;
+var COLOR_BROWN = 0x8B4513;
+var COLOR_TEAL = 0x008080;
+var COLOR_GRAY = 0x778899;
 
 /**
  * Sākt spēli.
