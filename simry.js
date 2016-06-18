@@ -67,7 +67,7 @@ function animate(tick) {
         requestAnimationFrame(fn);
         gameState && tick();
 
-        stage.childrens.sort(function(a, b){
+        stage.children.sort(function(a, b){
             a.zindex = a.zindex || 0;
             b.zindex = b.zindex || 0;
 
