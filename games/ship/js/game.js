@@ -1,5 +1,5 @@
 window.onload = function(){
-    init(500, 400, { backgroundColor: 0x000000 });
+    init(window.innerWidth, window.innerHeight, { backgroundColor: 0x000000 });
 
     var ships = [
         image(100, 350, 'image/ship0.png'),
