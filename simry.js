@@ -71,7 +71,7 @@ function animate(tick) {
             a.zindex = a.zindex || 0;
             b.zindex = b.zindex || 0;
 
-            return b.zindex - a.zindex
+            return a.zindex - b.zindex
         });
 
         renderer.render(stage);
