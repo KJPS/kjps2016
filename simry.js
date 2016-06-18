@@ -66,6 +66,14 @@ function animate(tick) {
     var fn = function(){
         requestAnimationFrame(fn);
         gameState && tick();
+
+        stage.childrens.sort(function(a, b){
+            a.zindex = a.zindex || 0;
+            b.zindex = b.zindex || 0;
+
+            return b.zindex - a.zindex
+        });
+
         renderer.render(stage);
     };
 
