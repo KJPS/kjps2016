@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+//variables
+PImage undertale;
+undertale = loadImage("UNDERTALE_EGG.gif");
+int tdelay = 0,p = 0,pp = 255,ppp = 0, p2 = 255,pp2 = 0,ppp2 = 0,pl = 1,ptime1 = 0,ptime2 = 0,time1 = 0,time2 = 0,eon = 0,ballx = 200,bally = 200,xplus = 1,yplus = 2,yminus = -2,xminus = -1,lx =400,score = 0,wall = 380,r=0,r1=0,r2=0,game=1,rs = 20,player = 0,introtext = 400,p1x = 40,p1y = 200,p2x = 360,p2y = 200,game2 = 0,chase1 = 200, chase2 = 200,menu = 1,delay = 0,time = 0,timespeed = 0.20,p1score = 0,p2score = 0,spmode=0,e = 255,e1 = 255,e2 = 255,score2 = 0,ox = 200,oy = 200,cx = random(30,370),cy = random(100,370),turn = 0,ready = 0,t2s = 1,t1s = 1,gameend = 0;
+void setup()
+{
+  size(400,400);
+  background(255);
+  fill(255);
+  PFont fontA = loadFont("courier");
+  textFont(fontA, 60);  
+}
+void draw(){
+if(mouseX==0&&mouseY==0&&mousePressed){
+link("mlg.html");
+}
+rs--;
+	if(eon==1){
+e=random(255,0);
+e1=random(255,0);
+e2=random(255,0);
+player=1;
+spmode=1;
+}
+if(rs==0){
+r=random(0,255);
+r1=random(0,255);
+r2=random(0,255);
+rs=20;
+}
+if(spmode==2){
+	background(255);
+	fill(r,r1,r2);
+	ellipse(ox,oy,20,20);
+	fill(255);
+	ellipse(cx,cy,20,20);
+if(keyPressed && keyCode === LEFT){
+ox-=2;
+}
+if(keyPressed && keyCode === RIGHT){
+ox+=2;
+}
+if(keyPressed && keyCode === DOWN){
+oy+=2;
+}
+if(keyPressed && keyCode === UP){
+oy-=2;
+}
+fill(0);
+line(0,70,400,70);
+fill(0,255,0);
+text("Score: "+score2,30,50);
+if(ox<cx+20&&ox>cx-20&&oy<cy+20&&oy>cy-20){
+score2++;
+cx=random(30,370);
+cy=random(100,370);
+}
+if(ox<10){
+ox=10;
+}
+if(ox>390){
+ox=390;
+}
+if(oy>390){
+oy=390;
+}
+if(oy<80){
+oy=80;
+}
+if(score2==420){
+fill(r,r1,r2);
+text("420 BLAZE IT",70,200);
+}
+}
+if(spmode==1){
+ballx+=xplus;
+	bally+=yplus;
+	if(bally>370){
+	yplus=yminus;
+	}
+	if(ballx>lx-10){
+	xplus=xminus;
+	}
+	if(bally<80){
+	yplus=2;
+	}
+	if(ballx<10){
+	xplus=1;
+	}
+	if(game==1&&mouseX>ballx-10&&mouseX<ballx+10&&mouseY>bally-10&&mouseY<bally+10&&mousePressed){
+	score++;
+	ballx=random(30,lx-30);
+	bally=random(90,370);
+	lx-=10;
+	}
+	background(e,e1,e2);
+	fill(0);
+		ellipse(mouseX,mouseY,10,10);
+	if(lx<0){
+	game=0;
+	text("YOU WON!",65,200);
+	timespeed=-1;
+	if(time<0){
+	time=0;
+	}
+	fill(255,0,0);
+	score = 0;
+	}
+	if(keyPressed && keyCode === SHIFT){
+ ptime1 = 0;
+ t2s = 1;
+ t1s = 1;
+ ptime2 = 0;
+ time1 = 0;
+ time2 = 0;
+ eon = 0;
+ ballx = 200;
+ bally = 200;
+ gameend = 0;
+ xplus = 1;
+ yplus = 2;
+ yminus = -2;
+ xminus = -1;
+ lx =400;
+ score = 0;
+ wall = 380;
+ r=0;
+ r1=0;
+ r2=0;
+ game=1;
+ rs = 20;
+ player = 0;
+ introtext = 400;
+ p1x = 40;
+ p1y = 200;
+ p2x = 360;
+ p2y = 200;
+ game2 = 0;
+ chase1 = 200;
+ chase2 = 200;
+ menu = 1;
+ delay = 0;
+ time = 0;
+ timespeed = 0.20;
+ p1score = 0;
+ p2score = 0;
+ spmode=0;
+ e = 255;
+ e1 = 255;
+ e2 = 255;
+ score2 = 0;
+ ox = 200;
+ oy = 200;
+ cx = random(30,370);
+ cy = random(100,370);
+ turn = 0;
+ ready = 0;
+ }
+ time-=timespeed;
+ if(time<-360){
+ fill(255,0,0);
+ text("YOU LOST",65,200);
+ game=0;
+ timespeed=0;
+ score=0;
+ lx+=10;
+ if(lx>400){
+ lx=400;
+ }
+ }
+	line(lx,70,lx,400);
+	line(0,70,400,70);
+	fill(0,255,0);
+	text("Score: "+score,30,50);
+	fill(0,255,0);
+	rect(20,380,360,10);
+	fill(255,0,0);
+	rect(380,380,time,10);
+	fill(r,r1,r2);
+	ellipse(ballx,bally,20,20);
+	}
+if(player==1&&spmode==0){
+fill(255,255,0);
+rect(0,0,400,200);
+rect(0,200,400,200);
+rect(90,100,220,80);
+rect(90,300,220,80);
+fill(r,r1,r2);
+ellipse(200,140,20,20);
+fill(r2,r1,r);
+ellipse(150,340,20,20);
+fill(255);
+ellipse(250,340,20,20);
+fill(0);
+text("Normal",20,70);
+text("Double",20,280);
+fill(255,0,0);
+ellipse(mouseX,mouseY,20,20);
+if(mouseY>200&&mousePressed&&delay<0) spmode=2;
+//Double mode
+if(mouseY<200&&mousePressed&&delay<0) spmode=1;
+//Normal mode
+}
+if(player==0){
+if(mouseX>190&&mouseX<210&&mouseY>150&&mouseY<170&&mousePressed) {eon=1;}
+if(mouseX>330&&mouseY>70&&mouseY<150&&mousePressed) {link("ExpertMode.html");}
+noCursor();
+fill(255,255,0);
+rect(0,0,400,200);
+rect(0,200,400,200);
+fill(0);
+text("1 Player",20,70);
+text("2 Player",20,280);
+text("E",350,130);
+line(330,70,330,150);
+line(330,70,400,70);
+line(330,150,400,150);
+fill(r,r1,r2);
+ellipse(200,160,20,20);
+fill(r1,r2,r);
+ellipse(160,350,20,20);
+fill(r,r2,r1);
+ellipse(230,350,20,20);
+fill(255,0,0);
+ellipse(mouseX,mouseY,20,20);
+introtext-=2;
+text("BallZ",introtext,200);
+if(mouseY<200&&mouseY>20&&mousePressed&&menu==1){
+player=1;
+delay =10;
+menu=2;
+}
+if(mouseY>200&&mousePressed&&menu==1){
+player=2;
+delay =10;
+menu=2;
+}
+}
+delay--;
+// Savecode = byte[] level = {};
+if(player==2) link("multiplayer.html");
+//UNDERTALE EASTEREGG <DO NOT TOUCH IF ACTIVE!>
+//REMOVE THE EASTEREGG IN CASE OF PROGRAM MALFUNCTION
+if(keyCode === 85) image(undertale,0,0,400,400);
+}
+</script>
+</head>
+<body>
+<canvas id="mycanvas"></canvas>
+<audio autoplay>
+  <source src="main.mp3" type="audio/mpeg">
+</audio>
+</body>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+noCursor();
+int tdelay = 0;
+int p = 0;
+int pp = 255;
+int ppp = 0;
+int p2 = 255;
+int pp2 = 0;
+int ppp2 = 0;
+int pl = 1;
+int ptime1 = 0;
+int ptime2 = 0;
+int time1 = 0;
+int time2 = 0;
+int eon = 0;
+int ballx = 200;
+int bally = 200;
+int xplus = 4;
+int yplus = 5;
+int yminus = -5;
+int xminus = -4;
+int lx =400;
+int score = 0;
+int wall = 380;
+int r=0;
+int r1=0;
+int r2=0;
+int game=1;
+int rs = 20;
+int player = 1;
+int introtext = 400;
+int p1x = 40;
+int p1y = 200;
+int p2x = 360;
+int p2y = 200;
+int game2 = 0;
+int chase1 = 200;
+int chase2 = 200;
+int menu = 1;
+int delay = 0;
+int time = 0;
+int timespeed = 0.27;
+int p1score = 0;
+int p2score = 0;
+int spmode=1;
+int e = 255;
+int e1 = 255;
+int e2 = 255;
+int score2 = 0;
+int ox = 200;
+int oy = 200;
+int cx = random(30,370);
+int cy = random(100,370);
+int turn = 0;
+int ready = 0;
+int t2s = 1;
+int t1s = 1;
+int gameend = 0;
+void setup()
+{
+  size(400,400);
+  background(255);
+  fill(255);
+  PFont fontA = loadFont("courier");
+  textFont(fontA, 60);  
+}
+void draw(){
+
+
+if(spmode==1){
+ballx+=xplus;
+	bally+=yplus;
+	if(bally>370){
+	yplus=yminus;
+	}
+	if(ballx>lx-10){
+	xplus=xminus;
+	}
+	if(bally<80){
+	yplus=5;
+	}
+	if(ballx<10){
+	xplus=4;
+	}
+	if(game==1&&mouseX>ballx-10&&mouseX<ballx+10&&mouseY>bally-10&&mouseY<bally+10&&mousePressed){
+	score++;
+	ballx=random(30,lx-30);
+	bally=random(90,370);
+	lx-=10;
+	}
+	background(e,e1,e2);
+	fill(0);
+		ellipse(mouseX,mouseY,10,10);
+	if(lx<0){
+	game=0;
+	text("YOU WON!",65,200);
+	timespeed=-1;
+	if(time<0){
+	time=0;
+	}
+	fill(255,0,0);
+	score = 0;
+	}
+	if(keyPressed && keyCode === SHIFT){
+ ptime1 = 0;
+ t2s = 1;
+ t1s = 1;
+ ptime2 = 0;
+ time1 = 0;
+ time2 = 0;
+ eon = 0;
+ ballx = 200;
+ bally = 200;
+ gameend = 0;
+ xplus = 4;
+ yplus = 5;
+ yminus = -5;
+ xminus = -4;
+ lx =400;
+ score = 0;
+ wall = 380;
+ r=0;
+ r1=0;
+ r2=0;
+ game=1;
+ rs = 20;
+ player = 1;
+ introtext = 400;
+ p1x = 40;
+ p1y = 200;
+ p2x = 360;
+ p2y = 200;
+ game2 = 0;
+ chase1 = 200;
+ chase2 = 200;
+ menu = 1;
+ delay = 0;
+ time = 0;
+ timespeed = 0.27;
+ p1score = 0;
+ p2score = 0;
+ spmode=1;
+ e = 255;
+ e1 = 255;
+ e2 = 255;
+ score2 = 0;
+ ox = 200;
+ oy = 200;
+ cx = random(30,370);
+ cy = random(100,370);
+ turn = 0;
+ ready = 0;
+ }
+ time-=timespeed;
+ if(time<-360){
+ fill(255,0,0);
+ text("YOU LOST",65,200);
+ game=0;
+ timespeed=0;
+ score=0;
+ lx+=10;
+ if(lx>400){
+ lx=400;
+ }
+ }
+	line(lx,70,lx,400);
+	line(0,70,400,70);
+	fill(0,255,0);
+	text("Score: "+score,30,50);
+	fill(0,255,0);
+	rect(20,380,360,10);
+	fill(255,0,0);
+	rect(380,380,time,10);
+	fill(r,r1,r2);
+	ellipse(ballx,bally,20,20);
+	}
+	}
+</script>
+</head>
+<body>
+<canvas id="mycanvas"></canvas>
+<audio autoplay>
+  <source src="expert.mp3" type="audio/mpeg">
+</audio>
+</body>

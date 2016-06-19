@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+noCursor();
+int tdelay = 0;
+int p = 0;
+int pp = 255;
+int ppp = 0;
+int p2 = 255;
+int pp2 = 0;
+int ppp2 = 0;
+int pl = 1;
+int ptime1 = 0;
+int ptime2 = 0;
+int time1 = 0;
+int time2 = 0;
+int eon = 0;
+int ballx = 200;
+int bally = 200;
+int xplus = 1;
+int yplus = 2;
+int yminus = -2;
+int xminus = -1;
+int lx =400;
+int score = 0;
+int wall = 380;
+int r=0;
+int r1=0;
+int r2=0;
+int game=1;
+int rs = 20;
+int player = 2;
+int introtext = 400;
+int p1x = 40;
+int p1y = 200;
+int p2x = 360;
+int p2y = 200;
+int game2 = 0;
+int chase1 = 200;
+int chase2 = 200;
+int menu = 1;
+int delay = 0;
+int time = 0;
+int timespeed = 0.20;
+int p1score = 0;
+int p2score = 0;
+int spmode=0;
+int e = 255;
+int e1 = 255;
+int e2 = 255;
+int score2 = 0;
+int ox = 200;
+int oy = 200;
+int cx = random(30,370);
+int cy = random(100,370);
+int turn = 0;
+int ready = 0;
+int t2s = 1;
+int t1s = 1;
+int gameend = 0;
+void setup()
+{
+  size(400,400);
+  background(255);
+  fill(255);
+  PFont fontA = loadFont("courier");
+  textFont(fontA, 60);  
+}
+void draw(){
+rs--;
+delay--;
+if(rs<0){
+r=random(0,255);
+r1=random(0,255);
+r2=random(0,255);
+rs=20;
+}
+if(game2==0){
+if(mouseY>200&&delay<1&&mousePressed) game2=2;
+if(mouseY<200&&delay<1&&mousePressed) {game2=1; delay=10;}
+fill(255,255,0);
+rect(0,0,400,200);
+rect(0,200,400,200);
+rect(50,100,280,80);
+fill(0);
+line(190,100,190,180);
+text(" Classic",20,70);
+text("  Chase",20,280);
+fill(255,0,0);
+ellipse(mouseX,mouseY,20,20);
+fill(r,r1,r2);
+ellipse(95,140,20,20);
+fill(r2,r1,r);
+ellipse(285,140,20,20);
+chase1-=2;
+chase2+=2;
+fill(255,0,0);
+ellipse(chase1,320,20,20);
+fill(0,255,0);
+ellipse(chase2,350,20,20);
+if(chase1<-20){
+chase1=420;
+}
+if(chase2>420){
+chase2=-20;
+}
+}
+if(game2==1){
+//Classic
+}
+if(game2==2){
+background(255);
+fill(0);
+ellipse(mouseX,mouseY,10,10);
+fill(p2,pp2,ppp2);
+ellipse(p1x,p1y,20,20);
+fill(p,pp,ppp);
+ellipse(p2x,p2y,20,20);
+tdelay--;
+if(keyCode === LEFT&&tdelay<=0){
+p2x-=1.6;
+tdelay=2;
+}
+if(keyCode === RIGHT&&tdelay<=0){
+p2x+=1.6;
+tdelay=2;
+}
+if(keyCode === DOWN&&tdelay<=0){
+p2y+=1.6;
+tdelay=2;
+}
+if(keyCode === UP&&tdelay<=0){
+p2y-=1.6;
+tdelay=2;
+}
+if (keyCode === 87){
+p1y-=2;
+}
+if (keyCode === 83){
+p1y+=2;
+}
+if (keyCode === 65){
+p1x-=2;
+}
+if (keyCode === 68){
+p1x+=2;
+}
+if(p1x>390){
+p1x=390;
+}
+if(p1x<10){
+p1x=10;
+}
+if(p1y>320){
+p1y=320;
+}
+if(p1y<80){
+p1y=80;
+}
+if(p2x>390){
+p2x=390;
+}
+if(p2x<10){
+p2x=10;
+}
+if(p2y>320){
+p2y=320;
+}
+if(p2y<80){
+p2y=80;
+}
+if(p1x<p2x+20&&p1x>p2x-20&&p1y<p2y+20&&p1y>p2y-20&&pl==1){
+p1x = 40;
+p1y = 200;
+p2x = 360;
+p2y = 200;
+keyCode = 0;
+p2score++;
+p=255;
+pp=0;
+ppp=0;
+p2=0;
+pp2=255;
+ppp2=0;
+if(p2score>5){
+p2score--;
+}
+pl=2;
+}
+if(p2x<p1x+20&&p2x>p1x-20&&p2y<p1y+20&&p2y>p1y-20&&pl==2){
+p2x = 360;
+p2y = 200;
+p1x = 40;
+p1y = 200;
+keyCode = 0;
+p1score++;
+p=0;
+pp=255;
+ppp=0;
+p2=255;
+pp2=0;
+ppp2=0;
+if(p1score>5){
+p1score--;
+}
+pl=1;
+}
+fill(0);
+line(0,70,400,70);
+line(0,330,400,330);
+fill(255,0,0);
+text("Score: "+p1score,40,40);
+fill(0,255,0);
+text("Score: "+p2score,40,380);
+}
+if(game2==1){
+background(255,0,0);
+fill(0,0,255);
+text("Player 1",60,180);
+text("Ready?",90,230);
+fill(0,255,0);
+ellipse(mouseX,mouseY,10,10);
+if(mousePressed&&delay<0) turn = 1;
+if(turn==1){
+ballx+=xplus;
+	bally+=yplus;
+	if(bally>390){
+	yplus=yminus;
+	}
+	if(ballx>lx-10){
+	xplus=xminus;
+	}
+	if(bally<80){
+	yplus=2;
+	}
+	if(ballx<10){
+	xplus=1;
+	}
+	if(game==1&&mouseX>ballx-10&&mouseX<ballx+10&&mouseY>bally-10&&mouseY<bally+10&&mousePressed){
+	if(mousePressed) delay = 10;
+	score++;
+	ballx=random(30,lx-30);
+	bally=random(90,370);
+	lx-=10;
+	}
+	ptime1++;
+	if(ptime1==70){
+	time1+=t1s;
+	ptime1=0;
+	}
+	background(e,e1,e2);
+	fill(0);
+		ellipse(mouseX,mouseY,10,10);
+		line(lx,70,lx,400);
+	line(0,70,400,70);
+	fill(0,255,0);
+	text("P1 Time:"+time1,30,50);
+	fill(r,r1,r2);
+	ellipse(ballx,bally,20,20);
+	if(lx<10) {turn = 2; t1s = 0;}
+	}
+	if(turn==2){
+	background(255,0,0);
+fill(0,0,255);
+text("Player 2",60,180);
+text("Ready?",90,230);
+fill(0,255,0);
+ellipse(mouseX,mouseY,10,10);
+if(mousePressed&&delay<0) {ready=1;
+ ballx = 200;
+ bally = 200;
+ xplus = 1;
+ yplus = 2;
+ yminus = -2;
+ xminus = -1;
+ lx =400;
+ e = 255;
+ e1 = 255;
+ e2 = 255;
+}
+	}
+	if(ready==1){
+	ballx+=xplus;
+	bally+=yplus;
+	if(bally>390){
+	yplus=yminus;
+	}
+	if(ballx>lx-10){
+	xplus=xminus;
+	}
+	if(bally<80){
+	yplus=2;
+	}
+	if(ballx<10){
+	xplus=1;
+	}
+	if(game==1&&mouseX>ballx-10&&mouseX<ballx+10&&mouseY>bally-10&&mouseY<bally+10&&mousePressed){
+	if(mousePressed) delay = 10;
+	score++;
+	ballx=random(30,lx-30);
+	bally=random(90,370);
+	lx-=10;
+	}
+	ptime2++;
+	if(ptime2==70){
+	time2+=t2s;
+	ptime2=0;
+	}
+	background(e,e1,e2);
+	fill(0);
+		ellipse(mouseX,mouseY,10,10);
+		line(lx,70,lx,400);
+	line(0,70,400,70);
+	fill(0,255,0);
+	text("P2 Time:"+time2,30,50);
+	fill(r,r1,r2);
+	ellipse(ballx,bally,20,20);
+	if(lx<10){
+	t2s=0;
+	gameend = 1;
+	}
+	}
+	if(gameend == 1){
+	background(255,0,0);
+	if(time1>time2){
+	text("PLAYER 2",50,180);
+	text(" WINS!",55,230);
+	}
+	if(time1<time2){
+	text("PLAYER 1",50,180);
+	text(" WINS!",55,230);
+	}
+	if(time1==time2){
+	text("IT'S A TIE!",20,180);
+	}
+	}
+}
+}
+</script>
+</head>
+<body>
+<canvas id="mycanvas"></canvas>
+<audio autoplay>
+  <source src="multiplayer.mp3" type="audio/mpeg">
+</audio>
+</body>

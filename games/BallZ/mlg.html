@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+PImage sickrekt;
+sickrekt = loadImage("illuminati.gif");
+PImage d;
+d = loadImage("dorito.gif");
+int a = 0;
+int aa = 0;
+int aaa = 0;
+void setup()
+{
+  size(800,800);
+  background(255);
+  fill(255);
+  PFont fontA = loadFont("courier");
+  textFont(fontA, 60);  
+}
+void draw(){
+a=random(-40,800);
+aa=random(-40,800);
+aaa=random(-40,800);
+image(sickrekt,0,0,800,800);
+image(d,a,aa,aaa,50);
+}
+</script>
+</head>
+<body>
+<canvas id="mycanvas"></canvas>
+<audio autoplay>
+  <source src="mlg.mp3" type="audio/mpeg">
+</audio>
+</body>
