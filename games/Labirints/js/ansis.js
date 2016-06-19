@@ -66,8 +66,8 @@ function runStage(stnr){
 		walls.push(rectangle(700,90,25,window.innerHeight-297,0x00008B));
 		walls.push(rectangle(825,0,25,window.innerHeight-322,0x00008B));
 		walls.push(rectangle(700,window.innerHeight-222,275,25,0x00008B));
-		walls.push(rectangle(825,window.innerHeight-(window.innerHeight-467),300,25,0x00008B));
-		walls.push(rectangle(1125,467,25,80,0x00008B));
+		walls.push(rectangle(825,442,300,25,0x00008B));
+		walls.push(rectangle(1125,442,25,105,0x00008B));
 		walls.push(rectangle(1125,525,500,25,0x00008B));
 	}
 	//window.innerWidth, window.innerHeight
