@@ -21,7 +21,7 @@
       "jsdoc-to-markdown": "^1.3"
   },
   "author": "Jānis Gruzis <jgruzis@gmail.com>",
-  "license": "MIT",
+  "license": "GPLv3",
   "bugs": {
     "url": "https://github.com/KJPS/kjps2016/issues"
   },
