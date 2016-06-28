@@ -18,6 +18,17 @@ TankGame.Boot.prototype = {
     //Nosaka fona krāsu
     this.game.stage.backgroundColor = '#2B200F';
 
+    if(JSON.parse(localStorage.getItem("player_names"))===null){
+        var names = { 'name1': '', 'name2': ''};
+        localStorage.setItem('player_names', JSON.stringify(names));
+    }
+
+    if(JSON.parse(localStorage.getItem("options"))===null){
+        var options = { 'particles': true, 'sounds': true, 'music': true};
+        localStorage.setItem('options', JSON.stringify(options));
+    }
+
+    window.music_playing=false;
     //Centering
 
     // this.game.stage.disableVisibilityChange = true;

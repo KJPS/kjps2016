@@ -2,4 +2,5 @@ body {
 	padding: 0px;
 	margin: 0px;
 	background-color: #1F1F1F;
+	overflow:hidden;
 }
